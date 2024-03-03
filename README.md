@@ -1,1 +1,1 @@
-# coding-computer-science
+# Repository for my codes made during courses
