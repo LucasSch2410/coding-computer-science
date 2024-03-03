@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function trivia(evt) {
+                if (evt == 'js'){
+                    document.getElementById("js").style.backgroundColor = "green"
+                    document.getElementById("question").innerHTML = "<h3>Correct!</h3>"
+                }
+                else {
+                    document.getElementById(evt).style.backgroundColor = "red"
+                    document.getElementById("question").innerHTML = "<h3>Incorrect</h3>"
+                }
+            }
+
+            function response(){
+                text_value = document.getElementById("text_value")
+                if (text_value.value == "domain name system") {
+                    text_value.style.backgroundColor = "green"
+                    document.getElementById("text_question").innerHTML = "<h3>Correct!</h3>"
+                }
+                else {
+                    text_value.style.backgroundColor = "red"
+                    document.getElementById("text_question").innerHTML = "<h3>Incorrect</h3>"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <!--<h1>Trivia!</h1>-->
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which of these is a programming language?</h3>
+                <h3 id="question"></h3>
+                <div>
+                    <button id="html" onclick="trivia('html')">HTML</button>
+                    <button id="css" onclick="trivia('css')">CSS</button>
+                    <button id="js" onclick="trivia('js')">JavaScript</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is DNS?</h3>
+                <h3 id="text_question"></h3>
+                <input id="text_value"></input>
+                <button onclick="response()">Submit</button>
+            </div>
+        </div>
+    </body>
+</html>

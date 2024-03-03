@@ -1,0 +1,19 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Has a very low time search in a random list of 50.000 numbers, and a very good time in a
+sorted list because only needs to verify one time (Omega(N^2)) in the list in the best case,
+or verify O(N^2) in the worst case of a random list, equals to the Selection Sort, so are
+the Bubble Sort.
+
+sort2 uses: Merge Sort
+
+How do you know?: Has a very fast search in a random list of 50.000 numbers compared to the others, which is
+the case that the Merge Sort have the best time in a worst case, O(n log n) with the Bubble Sort
+and the Selection Sort with O(N^2) in the worst case.
+
+
+sort3 uses: Selection Sort
+
+How do you know?: Has a very low time search in a sorted list of 50.000 numbers, when in the best case
+of a Selection Sort is a Omega(N^2), the slowest algorithm in a sorted list.
+

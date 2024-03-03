@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quotes
+{% endblock %}
+
+{% block main %}
+
+    <div>
+        <table class="mx-auto">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>{{ stock["symbol"] }}</td>
+                        <td>{{ usd(stock["price"]) }}</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

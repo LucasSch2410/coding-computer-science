@@ -1,0 +1,3 @@
+Analyze the genre distribution of the songs. This will give us an idea of the genres the listener enjoys the most.
+
+Calculates all the attributes of the most listened songs.

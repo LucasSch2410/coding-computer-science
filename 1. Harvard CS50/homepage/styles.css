@@ -1,0 +1,198 @@
+
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 20vw;
+}
+
+body *{
+    margin: 0;
+    padding: 0;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --degrade-background-text: linear-gradient(to right, rgba(144,255,252,1), rgba(251,242,62,1));
+    --purple-color-text: #151669;
+}
+
+body{
+    color: #fff;
+}
+
+body h1, body h2{
+    font-family: 'intel-bold', sans-serif;
+}
+
+body p{
+    font-size: clamp(1rem, 1vw, 2rem);
+    font-family: 'intel-regular', sans-serif;
+}
+
+body h1 {
+    font-size: clamp(1rem, 5vw, 9.6rem);
+}
+
+body h2, body h3{
+    font-size: clamp(1rem, 2.7vw, 5.3rem);
+}
+
+body h3{
+    font-family: 'intel-regular', sans-serif;
+}
+
+.bg-white{
+    background-color: #fff;
+}
+
+.text-black{
+    color: #000;
+}
+
+/* Gradient Keyframe */
+
+@keyframes gradient {
+    0%{
+        background-position:10% 0%
+    }
+    50%{
+        background-position:91% 100%
+    }
+    100%{
+        background-position:10% 0%
+    }
+}
+
+
+/* Header */
+
+header a {
+    padding: 1rem;
+}
+
+/* Main Section */
+
+.main-section{
+    height: 100vh;
+    background-image: url(../assets/background-01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1024px){
+    .main-section{
+        height: 100vh;
+        background-image: url(../assets/background-01-mobv2.jpg);
+    }
+}
+
+.main-section > div{
+    padding-top: 5vw;
+}
+
+.main-section > div > p{
+    padding: 0 0 3.5vw 0;
+}
+
+@media (max-width: 1024px){
+    .main-section > div > p{
+        padding: 4vw 0 3.5vw 0;
+    }
+}
+
+
+.main-section h1{
+    margin-top: 3vw;
+}
+
+.main-section h1 span{
+    font-size: clamp(1rem, 5.8vw, 11.3rem);
+    background-image: var(--degrade-background-text);
+    animation: gradient 2s ease infinite;
+    background-size: 200% 200%;
+
+    color: var(--purple-color-text);
+
+    display: inline-block;
+    padding: 0.5vw 1vw 0vw 1vw;
+
+    text-wrap: nowrap;
+}
+
+
+
+
+.main-section h2{
+    background-color: red;
+
+    background-image: var(--degrade-background-text);
+    animation: gradient 2s ease infinite;
+    background-size: 200% 200%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+}
+
+body button{
+    font-family: 'intel-bold', sans-serif;
+    font-size: clamp(2rem, 2vw, 3.8rem);
+    color: var(--purple-color-text);
+    padding: 2rem 4rem 1.5rem 4rem;
+
+    margin: 3vw 0;
+
+    border-radius: 4rem;
+    text-align: center;
+
+    background-image: var(--degrade-background-text);
+    animation: gradient 2s ease infinite;
+    background-size: 200% 200%;
+
+    transition: 0.5s ease;
+    border: 1px transparent solid;
+    text-wrap: nowrap;
+}
+
+
+
+ button:hover{
+    background-image: none;
+    scale: 1.1;
+
+    color: #fff;
+    border: 1px #fff solid;
+}
+
+@media (max-width: 1024px){
+    .main-section button{
+        padding: 2vw;
+    }
+}
+
+
+@media (max-width:640px){
+    .main-section button{
+        font-size: 1rem;
+        padding: 2vw;
+    }
+}
+
+.main-section p{
+    margin-top: 2vw;
+}
